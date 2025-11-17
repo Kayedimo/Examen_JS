@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtros mágicos</title>
+    <link rel="stylesheet" href="ejercicio_5_filtro_imagenes.css">
+    </head>
+    <body>
+
+    <h2>Filtros mágicos para tu imagen</h2>
+    <!-- Imagen a transformar -->
+    <img id="imagen" src="misti.jpg" alt="Imagen con filtros" width="400">
+
+    <!-- Deslizadores -->
+    <div>
+        <label for="blur">Desenfoque (blur):</label><br>
+        <input type="range" id="blur" min="0" max="10" value="3">
+        <span id="valor-blur">3px</span>
+    </div>
+
+    <div>
+        <label for="sepia">Tono sepia:</label><br>
+        <input type="range" id="sepia" min="0" max="100" value="60">
+        <span id="valor-sepia">60%</span>
+    </div>
+
+    <!-- Enlace al archivo JS -->
+    <script src="ejercicio_5_filtro_imagenes.js"></script>
+</body>
+</html>

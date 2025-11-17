@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bandera interactiva</title>
+    <style>
+        /* 🎨 Estilos básicos para la bandera */
+        .bandera {
+        width: 300px;
+        height: 150px;
+        border: 2px solid black;
+        }
+
+        .banda {
+        height: 33.33%;
+
+        width: 100%;
+    }
+
+    #banda1 { background-color: rgb(245, 187, 212); }
+    #banda2 { background-color: rgb(222, 214, 245); }
+    #banda3 { background-color: rgb(249, 222, 173); }
+    </style>
+</head>
+<body>
+
+
+    <h1>Bandera interactiva</h1>
+<!-- 1. evento onclick
+Crea una bandera tricolor con 3 <div>, de manera que al hacer click sobre cada de las bandas,
+ésta cambie a un color aleatorio.-->
+    <!-- Contenedor de la bandera -->
+    <div class="bandera">
+    <div class="banda" id="banda1"></div>
+    <div class="banda" id="banda2"></div>
+    <div class="banda" id="banda3"></div>
+    </div>
+
+    <script src="ejercicio_1_Evento_onclick.js"></script>
+</body>
+</html>

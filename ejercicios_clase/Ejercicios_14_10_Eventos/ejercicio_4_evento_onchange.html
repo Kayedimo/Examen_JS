@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Selector de Color</title>
+    <style>
+        #color-box {
+        width: 200px;
+        height: 100px;
+        margin-bottom: 8px;
+        border: 2px solid #333;
+        background-color: magenta; /* color inicial */
+        }
+
+        select {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 16px;
+        padding: 5px;
+        }
+
+        h2{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        
+        
+    </style>
+    </head>
+    <body>
+
+    <h2>Cambia el color del cuadro</h2>
+
+    <!-- Div que cambiará de color -->
+    <div id="color-box"></div>
+
+    <!-- Lista desplegable con colores -->
+    <label for="color-select"></label>
+    <select id="color-select" onchange="cambiarColor()">
+        <option value="magenta">Magenta</option>
+        <option value="red">Rojo</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+        <option value="cyan">Cian</option>
+        <option value="yellow">Amarillo</option>
+        <option value="white">Blanco</option>
+        <option value="black">Negro</option>
+    </select>
+
+    <script src="ejercicio_4_evento_onchange.js"></script>
+</body>
+</html>
