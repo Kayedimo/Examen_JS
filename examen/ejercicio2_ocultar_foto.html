@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     DECLARACIÓN DEL TIPO DE DOCUMENTO
+     ============================================================
+     Le dice al navegador: "Este es un documento HTML5"
+     Siempre va en la PRIMERA línea del archivo -->
+
+
+<html lang="es">
+<!-- Etiqueta raíz que envuelve TODO el documento
+     lang="es" → idioma español -->
+
+
+<head>
+    <!-- ============================================================
+         CABEZA DEL DOCUMENTO
+         ============================================================
+         Información SOBRE la página (no visible en pantalla) -->
+    
+    
+    <meta charset="UTF-8">
+    <!-- ============================================================
+         CODIFICACIÓN DE CARACTERES
+         ============================================================
+         UTF-8 permite usar:
+         - Tildes: á, é, í, ó, ú
+         - Letra ñ
+         - Símbolos especiales
+         - Emojis -->
+    
+    
+    <title>Ocultar imagen</title>
+    <!-- ============================================================
+         TÍTULO DE LA PÁGINA
+         ============================================================
+         Aparece en:
+         - La pestaña del navegador
+         - Los favoritos
+         - El historial
+         
+         NO aparece dentro de la página -->
+    
+    
+    <link rel="stylesheet" href="ejercicio2_ocultar_foto.css">
+    <!-- ============================================================
+         ENLACE A ARCHIVO CSS EXTERNO
+         ============================================================
+         <link> es una etiqueta para enlazar recursos externos
+         
+         Atributos:
+         
+         1. rel="stylesheet"
+            rel = relationship (relación)
+            "stylesheet" = hoja de estilos
+            Le dice al navegador: "Este es un archivo CSS"
+         
+         2. href="2. Ocultar_foto.css"
+            href = hypertext reference (referencia)
+            Es la RUTA del archivo CSS
+            
+            El archivo debe estar en la MISMA CARPETA que el HTML
+            
+            Si estuviera en otra carpeta:
+            href="css/2. Ocultar_foto.css"  (carpeta css/)
+            href="../estilos.css"           (carpeta padre)
+         
+         ¿Para qué sirve el CSS?
+         Para dar ESTILO a la página:
+         - Colores
+         - Tamaños de letra
+         - Márgenes y espaciados
+         - Bordes
+         - Posiciones
+         - etc.
+         
+         IMPORTANTE:
+         <link> es una etiqueta VACÍA (no tiene cierre </link>)
+         Se cierra sola: <link ... >
+         
+         ¿Por qué separar CSS del HTML?
+         - El HTML define la ESTRUCTURA (qué elementos hay)
+         - El CSS define la APARIENCIA (cómo se ven)
+         - Es más fácil de mantener y organizar -->
+    
+</head>
+
+
+    <body>
+    <!-- ============================================================
+         CUERPO DEL DOCUMENTO
+         ============================================================
+         TODO lo VISIBLE de la página -->
+        
+        
+        <h1>Haz click en la imagen para ocultarla</h1>
+        <!-- ============================================================
+             TÍTULO PRINCIPAL
+             ============================================================
+             <h1> es el título más importante
+             
+             Texto: "Haz click en la imagen para ocultarla"
+             
+             Esto le indica al usuario QUÉ hacer:
+             - Haz clic en la imagen → se oculta
+             
+             (Falta mencionar que el botón la muestra, pero
+              se entiende por el texto del botón) -->
+
+
+<!-- ============================================================
+     COMENTARIO: ENUNCIADO DEL EJERCICIO
+     ============================================================
+     Los comentarios HTML no se ven en la página
+     Solo en el código fuente -->
+<!-- Crea una página con un botón y una fotografía. 
+     Al clickar en la foto se ocultará, 
+     y con el botón se volverá a visibilizar.
+     
+     ocultar un elemento de la página web:
+     
+     - estilos CSS:    
+       visibility: { hidden | visible }
+       display: { none | inline | block | inline-block ...}
+     
+     - atributo HTML:  
+       hidden="{ true | false }"
+-->
+
+
+        <!-- Imagen de Harry Potter -->
+        <!-- Este es un comentario que explica qué viene después -->
+        
+        
+        <img id="harry" src="https://wallpaperaccess.com/full/1154344.jpg" alt="Harry Potter">
+        <!-- ============================================================
+             IMAGEN
+             ============================================================
+             <img> es una etiqueta para mostrar IMÁGENES
+             
+             Es una etiqueta VACÍA (no tiene cierre </img>)
+             Se cierra sola: <img ... >
+             
+             Atributos explicados:
+             
+             1. id="harry"
+                ¿Qué es? → Identificador único de la imagen
+                Es como el DNI de la imagen
+                
+                ¿Para qué sirve?
+                JavaScript usa este id para:
+                - Encontrar esta imagen específica
+                - Ocultarla cuando se haga clic
+                - Mostrarla cuando se pulse el botón
+                
+                Ejemplo en JavaScript:
+                document.getElementById("harry")
+                → Busca el elemento con id="harry"
+                
+                ¿Por qué "harry"?
+                Porque es una imagen de Harry Potter
+                Podría ser cualquier nombre: "foto", "imagen1", "miImagen"
+             
+             2. src="https://wallpaperaccess.com/full/1154344.jpg"
+                src = source (fuente/origen)
+                
+                ¿Qué es? → La URL (dirección) de la imagen
+                
+                En este caso, es una imagen de INTERNET:
+                https://wallpaperaccess.com/full/1154344.jpg
+                
+                Tipos de rutas:
+                
+                A) URL de internet (lo que usas):
+                   src="https://ejemplo.com/imagen.jpg"
+                   → Carga la imagen desde internet
+                   → Necesitas conexión a internet
+                   → Si la web se cae, la imagen desaparece
+                
+                B) Archivo local (mismo directorio):
+                   src="harry.jpg"
+                   → La imagen está en la misma carpeta que el HTML
+                   → No necesitas internet
+                   → Más rápido
+                
+                C) Archivo en subcarpeta:
+                   src="imagenes/harry.jpg"
+                   → La imagen está en la carpeta "imagenes/"
+                
+                D) Ruta absoluta:
+                   src="/imagenes/harry.jpg"
+                   → Desde la raíz del servidor
+             
+             3. alt="Harry Potter"
+                alt = alternative text (texto alternativo)
+                
+                ¿Para qué sirve?
+                
+                A) Si la imagen NO se carga:
+                   → Aparece el texto "Harry Potter" en su lugar
+                   → El usuario sabe qué debería haber ahí
+                
+                B) Para personas ciegas:
+                   → Los lectores de pantalla leen este texto
+                   → "Imagen de Harry Potter"
+                
+                C) Para buscadores (SEO):
+                   → Google usa este texto para saber qué es la imagen
+                
+                D) Es OBLIGATORIO en HTML válido
+                   → Aunque la imagen cargue bien
+                
+                BUENAS PRÁCTICAS:
+                ✓ alt="Harry Potter" (descriptivo)
+                ✗ alt="imagen" (poco descriptivo)
+                ✗ alt="" (vacío, solo si es decorativa)
+             
+             RESUMEN DE <img>:
+             Es como un marco en la pared:
+             - id → el nombre del marco
+             - src → la foto que pones dentro
+             - alt → la etiqueta que explica la foto -->
+        
+        
+        <!-- Botón para mostrar la imagen -->
+        <!-- Comentario explicando qué viene después -->
+        
+        
+        <br><br>
+        <!-- ============================================================
+             SALTOS DE LÍNEA
+             ============================================================
+             <br> = line break (salto de línea)
+             
+             Es una etiqueta VACÍA (no tiene cierre </br>)
+             Se escribe: <br> o <br/>
+             
+             ¿Qué hace?
+             Crea un salto de línea (como pulsar Enter)
+             
+             <br><br> = DOS saltos de línea
+             → Crea más espacio vertical
+             → Separa la imagen del botón
+             
+             Ejemplo visual:
+             
+             [Imagen de Harry Potter]
+             ↓ <br>
+             (espacio vacío)
+             ↓ <br>
+             [Botón]
+             
+             ALTERNATIVA MEJOR:
+             En vez de usar <br>, es mejor usar CSS:
+             margin-bottom: 20px;
+             
+             Pero <br> es válido y funciona ✓
+             
+             REGLA:
+             - 1 o 2 <br> → aceptable
+             - Más de 2 <br> → mejor usar CSS -->
+
+
+        <button id="mostrarBtn">Mostrar imagen</button>
+        <!-- ============================================================
+             BOTÓN
+             ============================================================
+             <button> es un botón clickeable
+             
+             Atributos:
+             
+             id="mostrarBtn"
+             ¿Qué es? → Identificador único del botón
+             
+             ¿Para qué sirve?
+             JavaScript usa este id para:
+             - Encontrar este botón
+             - Detectar cuando se hace clic en él
+             - Ejecutar código cuando lo pulsen
+             
+             Ejemplo en JavaScript:
+             document.getElementById("mostrarBtn")
+             → Busca el botón con id="mostrarBtn"
+             
+             ¿Por qué "mostrarBtn"?
+             - "mostrar" → describe qué hace (muestra la imagen)
+             - "Btn" → abreviatura de "Button" (botón)
+             
+             Convenciones de nombres:
+             ✓ mostrarBtn (camelCase)
+             ✓ mostrar-btn (kebab-case)
+             ✓ mostrar_btn (snake_case)
+             ✗ mostrar btn (con espacio, NO válido)
+             
+             Texto del botón:
+             "Mostrar imagen" → Es lo que aparece DENTRO del botón
+             El texto entre <button> y </button>
+             
+             Es el texto que el usuario VE y LEE
+             
+             Debe ser DESCRIPTIVO:
+             ✓ "Mostrar imagen" (claro)
+             ✓ "Volver a mostrar" (claro)
+             ✗ "Click aquí" (poco descriptivo)
+             
+             NOTA:
+             Este botón NO tiene el atributo type
+             Por defecto es type="button" (botón normal)
+             
+             Tipos de botones:
+             type="button" → botón normal (por defecto)
+             type="submit" → envía un formulario
+             type="reset" → resetea un formulario -->
+
+
+        <script src ="ejercicio2_ocultar_foto.js"></script>
+        <!-- ============================================================
+             ENLACE AL ARCHIVO JAVASCRIPT
+             ============================================================
+             <script> sirve para incluir código JavaScript
+             
+             Atributo:
+             
+             src="2. Ocultar_foto.js"
+             src = source (fuente/origen)
+             
+             ¿Qué hace?
+             Le dice al navegador:
+             "Busca el archivo 2. Ocultar_foto.js
+              y ejecuta el código JavaScript que hay dentro"
+             
+             IMPORTANTE:
+             - El archivo debe estar en la MISMA CARPETA que el HTML
+             - El nombre tiene un ESPACIO: "2. Ocultar_foto.js"
+               (funciona pero NO es recomendado)
+             - Mejor usar guiones: "2-ocultar-foto.js"
+               o guiones bajos: "2_ocultar_foto.js"
+             
+             NOTA: Hay un ESPACIO EXTRA en tu código:
+             src ="2. Ocultar_foto.js"
+                 ↑ espacio entre = y "
+             
+             Debería ser (sin espacio):
+             src="2. Ocultar_foto.js"
+             
+             Aunque funciona con el espacio, es mejor sin él
+             
+             ¿Dónde poner el <script>?
+             Puedes ponerlo en:
+             
+             A) En el <head>:
+                <head>
+                    <script src="archivo.js"></script>
+                </head>
+                → Se carga ANTES del body
+                → Puede dar errores si el JS busca elementos que no existen aún
+             
+             B) Al FINAL del <body> (lo que haces):
+                <body>
+                    ... contenido ...
+                    <script src="archivo.js"></script>
+                </body>
+                → Se carga DESPUÉS del contenido
+                → Más seguro ✓
+                → El HTML ya está cargado cuando se ejecuta el JS
+             
+             C) En el <head> con defer:
+                <head>
+                    <script src="archivo.js" defer></script>
+                </head>
+                → Se carga en paralelo pero se ejecuta al final
+                → Moderno y eficiente ✓
+             
+             Tu forma (al final del body) es CORRECTA y común ✓ -->
+
+
+</body>
+</html>
+<!-- ============================================================
+     FIN DEL DOCUMENTO HTML
+     ============================================================
+     
+     ESTRUCTURA COMPLETA:
+     
+     <html>
+       │
+       ├── <head>
+       │     ├── <meta charset>
+       │     ├── <title>
+       │     └── <link> (CSS)
+       │
+       └── <body>
+             ├── <h1>
+             ├── <img>
+             ├── <br><br>
+             ├── <button>
+             └── <script> (JavaScript)
+     
+     
+     FLUJO VISUAL EN PANTALLA:
+     
+     ┌────────────────────────────────────┐
+     │ Ocultar imagen              [×]    │ ← <title>
+     ├────────────────────────────────────┤
+     │                                    │
+     │  Haz click en la imagen para       │ ← <h1>
+     │  ocultarla                         │
+     │                                    │
+     │  ┌──────────────────────────┐      │
+     │  │                          │      │
+     │  │   [Imagen Harry Potter]  │      │ ← <img>
+     │  │                          │      │
+     │  └──────────────────────────┘      │
+     │                                    │
+     │                                    │ ← <br><br>
+     │       [ Mostrar imagen ]           │ ← <button>
+     │                                    │
+     └────────────────────────────────────┘ -->
