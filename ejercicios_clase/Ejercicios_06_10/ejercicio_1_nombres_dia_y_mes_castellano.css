@@ -1,0 +1,53 @@
+/* Estilos del body (toda la página) */
+body {
+    /* Fuente básica */
+    font-family: Arial;
+    /* Color de fondo celeste */
+    background-color: rgb(208, 168, 209);
+    /* Espacio alrededor */
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    /* Fondo blanco */
+    background-color: white;
+    /* Espacio interno */
+    padding: 20px;
+    /* Ancho máximo */
+    max-width: 500px;
+    /* Centra el contenedor */
+    margin: 0 auto;
+}
+
+/* Título h1 */
+h1 {
+    /* Centra el texto */
+    text-align: center;
+    /* Color azul */
+    color: rgb(51, 99, 241);
+}
+
+/* Input de fecha */
+#inputFecha {
+    /* Ancho completo */
+    width: 100%;
+    /* Espacio interno */
+    padding: 2px;
+    /* Tamaño de letra */
+    font-size: 18px;
+}
+
+/* Div del resultado */
+#resultado {
+    /* Espacio arriba */
+    margin-top: 20px;
+    /* Espacio interno */
+    padding: 15px;
+    /* Fondo amarillo */
+    background-color: rgb(171, 218, 146);
+    /* Centra el texto */
+    text-align: center;
+    /* Tamaño de letra */
+    font-size: 20px;
+}
