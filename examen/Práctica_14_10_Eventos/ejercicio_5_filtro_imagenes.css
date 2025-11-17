@@ -1,0 +1,33 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+    padding: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #343c30;
+    margin-bottom: 20px;
+}
+
+img {
+    transition: filter 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #2d3436;
+}
+
+input[type="range"] {
+    width: 300px;
+    margin: 10px;
+    }
+
+    span {
+    font-style: italic;
+    color: #636e72;
+}

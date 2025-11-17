@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    }
+
+    #control-box {
+    position: absolute;
+    background-color: lightblue;
+    border: 2px solid navy;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 100px;
+    transition: all 0.2s ease;
+    }
+
+    .control-group {
+    margin-bottom: 15px;
+    }
+
+    label {
+    margin-right: 10px;
+}
