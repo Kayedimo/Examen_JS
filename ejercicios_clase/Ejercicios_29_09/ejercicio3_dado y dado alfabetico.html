@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dado numérico y alfabético</title>
+    <style>
+        .caja {
+            border: 2px solid #888;
+            border-radius: 16px;
+            width: 150px;
+            margin: 40px auto;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            background: #fff;
+        }
+        .resultado {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+        }
+        button {
+            padding: 4px 16px;
+            font-size: 1em;
+            border-radius: 6px;
+            border: 1px solid #888;
+            background: #eee;
+            cursor: pointer;
+        }
+    </style>
+    <script src="ejercicio3_dado y dado alfabetico.js"></script>
+</head>
+<body>
+    <div class="caja">
+        <button type="button" onclick="mostrarNumero()">dado 1-6</button>
+        <div id="resultado-num" class="resultado"></div>
+        <button type="button" onclick="mostrarLetra()">dado A-Z</button>
+        <div id="resultado-letra" class="resultado"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Copiar texto entre cajas</title>
+    <style>
+        .contenedor {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 40px auto;
+            width: max-content;
+        }
+        .botones {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        input[type="text"] {
+            width: 180px;
+            height: 40px;
+            font-size: 1.2em;
+            padding: 4px 8px;
+        }
+        button {
+            width: 48px;
+            height: 32px;
+            font-size: 1em;
+            border-radius: 6px;
+            border: 1px solid #888;
+            background: #eaeaea;
+            cursor: pointer;
+        }
+    </style>
+    <script src="ejercicio4_intercambio de datos.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <input type="text" id="caja1" value="hola mundo">
+        <div class="botones">
+            <button type="button" onclick="copiarDerecha()">&gt;&gt;</button>
+            <button type="button" onclick="copiarIzquierda()">&lt;&lt;</button>
+        </div>
+        <input type="text" id="caja2">
+    </div>
+</body>
+</html>
