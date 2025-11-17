@@ -1,0 +1,29 @@
+1. De la idea a la estructura
+Cuando te dan un enunciado, lo primero no es pensar en código, sino en acciones. Por ejemplo:
+“Filtra las comidas que tienen más de 10 letras”
+
+Tu mente puede traducirlo así:
+- Tengo una lista de comidas
+- Quiero revisar una por una
+- Si una comida tiene más de 10 letras, la guardo
+- Al final, devuelvo o muestro las que guardé
+💡 Esa es la lógica. El código solo traduce eso
+
+2. Mapa mental de estructuras básicas
+Aquí tienes un mini mapa que puedes tener en mente:
+Intención: Contar cuántos cumplen algo
+    let contador = 0; if (condición) contador++; | 
+Intención: Guardar los que cumplen
+    let nuevoArray = []; if (condición) nuevoArray.push(...) | 
+Intención: Modificar cada elemento
+for (...) { lista[i] = ... } | 
+Intención: Mostrar uno a uno
+for (...) { console.log(lista[i]) } | 
+Intención: Devolver algo
+return resultado; | 
+
+
+
+
+
+
