@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     DECLARACIÓN DEL TIPO DE DOCUMENTO
+     ============================================================
+     Esta primera línea le dice al navegador:
+     "Este es un documento HTML5"
+     
+     Es obligatoria y siempre debe ir AL PRINCIPIO del archivo
+     Sin esta línea, el navegador podría interpretar mal el código -->
+
+
+<html lang="es">
+<!-- ============================================================
+     ETIQUETA RAÍZ HTML
+     ============================================================
+     <html> es la etiqueta PRINCIPAL que envuelve TODO
+     Es como la caja más grande que contiene todo el documento
+     
+     Atributo:
+     - lang="es" → Indica que el idioma es ESPAÑOL
+       Ayuda a:
+       • Lectores de pantalla (para personas con discapacidad visual)
+       • Traductores automáticos del navegador
+       • Buscadores como Google -->
+
+<head>
+    <!-- ============================================================
+         CABEZA DEL DOCUMENTO
+         ============================================================
+         <head> contiene METADATOS (información SOBRE la página)
+         
+         Lo que va aquí NO se ve en la pantalla
+         Es información para el navegador y buscadores
+         
+         Es como el sobre de una carta:
+         - Tiene el remitente
+         - La dirección
+         - El sello
+         Pero NO es el contenido de la carta -->
+    
+    
+    <meta charset="UTF-8">
+    <!-- ============================================================
+         CODIFICACIÓN DE CARACTERES
+         ============================================================
+         charset = character set (conjunto de caracteres)
+         UTF-8 = formato que incluye TODOS los caracteres
+         
+         Permite usar:
+         - Tildes: á, é, í, ó, ú
+         - Ñ española
+         - Símbolos: €, ©, ®, °
+         - Emojis: 🔴, 🟢, 🔵
+         
+         SIN esto, "Número" se vería como "NÃºmero" -->
+    
+    
+    <title>Color aleatorio RGB</title>
+    <!-- ============================================================
+         TÍTULO DE LA PÁGINA
+         ============================================================
+         <title> es el texto que aparece en:
+         - La pestaña del navegador (arriba)
+         - Los marcadores/favoritos
+         - El historial
+         - Los resultados de búsqueda de Google
+         
+         NO aparece dentro de la página
+         Solo se ve en la pestaña del navegador
+         
+         Es como el título de un libro en el lomo -->
+    
+    
+    <!-- ======================================== -->
+    <!-- ESTILOS CSS -->
+    <!-- ======================================== -->
+    <style>
+        /* ============================================================
+           RESUMEN GENERAL DEL CSS
+           ============================================================
+           
+           El CSS de esta página hace:
+           
+           .caja → Contenedor principal con:
+                   - Borde gris redondeado
+                   - Fondo amarillo claro (#fffbe6)
+                   - Centrado en la página
+                   - Elementos organizados en columna
+           
+           .botones → Contenedor de los 3 botones:
+                      - Los botones se muestran en fila
+                      - Espaciados entre sí
+           
+           .botones button → Estilos de los botones:
+                             - Bordes redondeados
+                             - Fondo gris claro
+                             - Cursor en forma de manita
+           
+           .rojo, .verde, .azul → Colores de texto y borde de cada botón
+           
+           .resultado → Números RGB grandes y centrados:
+                        - Fuente muy grande (2.5em)
+                        - Negrita
+                        - Espaciados entre sí
+           
+           .colorbox → Cuadro que cambia de color:
+                       - 80% del ancho de la caja
+                       - 100px de alto
+                       - Esquinas redondeadas
+                       - Empieza negro rgb(0,0,0)
+                       - Transición suave al cambiar color
+           ============================================================ */
+        
+        .caja {
+            border: 2px solid #888;
+            border-radius: 16px;
+            width: 350px;
+            margin: 40px auto;
+            padding: 20px 10px;
+            background: #fffbe6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+        .botones {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .botones button {
+            padding: 4px 16px;
+            font-size: 1em;
+            border-radius: 6px;
+            border: 1px solid #888;
+            background: #eee;
+            cursor: pointer;
+        }
+        .botones .rojo { color: #c00; border-color: #c00; }
+        .botones .verde { color: #080; border-color: #080; }
+        .botones .azul { color: #00c; border-color: #00c; }
+        .resultado {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+            letter-spacing: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+        .colorbox {
+            width: 80%;
+            height: 100px;
+            margin: 0 auto;
+            border-radius: 8px;
+            background: rgb(0,0,0);
+            transition: background 0.3s;
+        }
+    </style>
+    <!-- ============================================================
+         ETIQUETA STYLE
+         ============================================================
+         <style> contiene código CSS
+         CSS = Cascading Style Sheets (Hojas de Estilo)
+         
+         CSS sirve para DECORAR la página:
+         - Colores
+         - Tamaños de letra
+         - Posiciones
+         - Bordes
+         - Espaciados
+         - Etc.
+         
+         Es como el maquillaje y vestuario de la página -->
+    
+    
+    <script src="ejercicio6_color _aleatorio.js"></script>
+    <!-- ============================================================
+         ENLACE AL ARCHIVO JAVASCRIPT
+         ============================================================
+         <script> sirve para incluir JavaScript
+         
+         Atributo:
+         - src="ejercicio6_color aleatorio.js"
+           src = source (fuente/origen)
+           Es la RUTA del archivo JavaScript
+         
+         Esta línea dice:
+         "Busca el archivo ejercicio6_color aleatorio.js y ejecútalo"
+         
+         IMPORTANTE:
+         - El archivo debe estar en la MISMA CARPETA que el HTML
+         - El nombre debe ser EXACTO (con espacios si los tiene)
+         - Mejor evitar espacios: ejercicio6_color_aleatorio.js
+         
+         JavaScript es el CEREBRO de la página:
+         - Hace que los botones funcionen
+         - Genera números aleatorios
+         - Cambia los colores
+         - Etc. -->
+    
+</head>
+<!-- Aquí termina la CABEZA -->
+
+
+<body>
+    <!-- ============================================================
+         CUERPO DEL DOCUMENTO
+         ============================================================
+         <body> contiene TODO lo VISIBLE de la página
+         
+         Todo lo que escribas aquí SÍ se ve en pantalla:
+         - Textos
+         - Botones
+         - Imágenes
+         - Cajas de colores
+         - Etc.
+         
+         Es el contenido real de la página -->
+    
+    
+    <!-- ======================================== -->
+    <!-- CAJA PRINCIPAL -->
+    <!-- ======================================== -->
+    <div class="caja">
+        <!-- ============================================================
+             CONTENEDOR PRINCIPAL
+             ============================================================
+             <div> = división / caja / contenedor
+             
+             Atributo:
+             - class="caja" → Aplica los estilos CSS de .caja
+               (borde, fondo amarillo, centrado, etc.)
+             
+             Esta caja contiene:
+             1. Los 3 botones (rojo, verde, azul)
+             2. Los 3 números (valores RGB)
+             3. El cuadro que cambia de color
+             
+             Es como una caja de cartón que agrupa todo -->
+        
+        
+        <!-- ===== CONTENEDOR DE LOS BOTONES ===== -->
+        <div class="botones">
+            <!-- ============================================================
+                 CAJA DE BOTONES
+                 ============================================================
+                 <div class="botones"> agrupa los 3 botones
+                 
+                 Con CSS, los botones se muestran en FILA (horizontalmente)
+                 Sin este div, los botones estarían apilados (verticalmente) -->
+            
+            
+            <button type="button" class="rojo" onclick="lanzarColor(1)">rojo</button>
+            <!-- ============================================================
+                 BOTÓN ROJO
+                 ============================================================
+                 <button> = botón clickeable
+                 
+                 Atributos:
+                 - type="button" → Es un botón normal (no envía formulario)
+                 
+                 - class="rojo" → Aplica estilos CSS de .rojo
+                   (texto rojo, borde rojo)
+                 
+                 - onclick="lanzarColor(1)" → EVENTO DE CLIC
+                   onclick = "cuando hagan clic"
+                   lanzarColor(1) = ejecuta la función lanzarColor con parámetro 1
+                   
+                   ¿Qué pasa al pulsar?
+                   1. Se detecta el clic
+                   2. Se busca la función lanzarColor en el archivo JS
+                   3. Se ejecuta lanzarColor(1)
+                   4. El 1 le dice: "genera un número para el ROJO"
+                 
+                 Texto del botón:
+                 "rojo" → lo que aparece dentro del botón -->
+            
+            
+            <button type="button" class="verde" onclick="lanzarColor(2)">verde</button>
+            <!-- ============================================================
+                 BOTÓN VERDE
+                 ============================================================
+                 Igual que el botón rojo, pero:
+                 - class="verde" → texto y borde verde
+                 - onclick="lanzarColor(2)" → parámetro 2 = color VERDE
+                 - Texto: "verde" -->
+            
+            
+            <button type="button" class="azul" onclick="lanzarColor(3)">azul</button>
+            <!-- ============================================================
+                 BOTÓN AZUL
+                 ============================================================
+                 Igual que los anteriores, pero:
+                 - class="azul" → texto y borde azul
+                 - onclick="lanzarColor(3)" → parámetro 3 = color AZUL
+                 - Texto: "azul" -->
+            
+        </div>
+        <!-- Fin del contenedor de botones -->
+        
+        
+        <!-- ===== CONTENEDOR DE LOS NÚMEROS RGB ===== -->
+        <div class="resultado">
+            <!-- ============================================================
+                 CAJA DE RESULTADOS
+                 ============================================================
+                 <div class="resultado"> contiene los 3 números
+                 
+                 Con CSS, los números se muestran:
+                 - Muy grandes (2.5em)
+                 - En negrita
+                 - Espaciados entre sí (gap: 32px)
+                 
+                 Aquí se muestran los valores RGB:
+                 Ejemplo: 123  45  200 -->
+            
+            
+            <span id="valor-rojo">0</span>
+            <!-- ============================================================
+                 VALOR DEL ROJO
+                 ============================================================
+                 <span> = contenedor en línea (inline)
+                 Sirve para agrupar texto y aplicarle estilos
+                 
+                 Atributos:
+                 - id="valor-rojo" → Identificador ÚNICO
+                   JavaScript usa este id para ENCONTRAR este elemento
+                   y cambiar su contenido
+                 
+                 Contenido inicial:
+                 "0" → Al cargar la página, el rojo empieza en 0
+                 
+                 Ejemplo de JavaScript:
+                 document.getElementById("valor-rojo").innerHTML = 123;
+                 → Busca el elemento con id="valor-rojo"
+                 → Cambia su contenido a 123
+                 → En pantalla se ve: 123
+                 
+                 Este número representa el componente ROJO del color RGB
+                 Va de 0 (nada de rojo) a 255 (rojo máximo) -->
+            
+            
+            <span id="valor-verde">0</span>
+            <!-- ============================================================
+                 VALOR DEL VERDE
+                 ============================================================
+                 Igual que valor-rojo, pero:
+                 - id="valor-verde" → JavaScript cambia este elemento
+                 - Representa el componente VERDE
+                 - Va de 0 a 255 -->
+            
+            
+            <span id="valor-azul">0</span>
+            <!-- ============================================================
+                 VALOR DEL AZUL
+                 ============================================================
+                 Igual que los anteriores, pero:
+                 - id="valor-azul" → JavaScript cambia este elemento
+                 - Representa el componente AZUL
+                 - Va de 0 a 255
+                 
+                 RESUMEN:
+                 Los 3 <span> juntos muestran el color RGB completo
+                 Ejemplo: 255  128  64
+                 Significa: rgb(255, 128, 64) -->
+            
+        </div>
+        <!-- Fin del contenedor de resultados -->
+        
+        
+        <!-- ===== CUADRO DE COLOR ===== -->
+        <div id="colorbox" class="colorbox"></div>
+        <!-- ============================================================
+             CUADRO QUE CAMBIA DE COLOR
+             ============================================================
+             <div> = caja vacía
+             
+             Atributos:
+             - id="colorbox" → Identificador ÚNICO
+               JavaScript usa este id para encontrar este elemento
+               y cambiar su color de fondo
+             
+             - class="colorbox" → Aplica estilos CSS:
+               • width: 80% (80% del ancho de la caja padre)
+               • height: 100px (100 píxeles de alto)
+               • background: rgb(0,0,0) (negro al inicio)
+               • border-radius: 8px (esquinas redondeadas)
+               • transition: 0.3s (cambio suave de color)
+             
+             Esta caja está VACÍA (no tiene texto ni contenido)
+             Solo es un cuadrado que cambia de color
+             
+             ¿Cómo cambia de color?
+             JavaScript ejecuta algo como:
+             document.getElementById("colorbox").style.backgroundColor = "rgb(255, 128, 64)";
+             
+             Paso a paso:
+             1. Buscas el elemento con id="colorbox"
+             2. Accedes a su propiedad de estilo: .style
+             3. Cambias el color de fondo: .backgroundColor
+             4. Le pones un color RGB: "rgb(255, 128, 64)"
+             5. El cuadro cambia de color suavemente (transition)
+             
+             Estado inicial:
+             El cuadro es NEGRO: rgb(0, 0, 0)
+             
+             Después de pulsar botones:
+             El cuadro cambia según los valores RGB generados -->
+        
+    </div>
+    <!-- Fin de la caja principal -->
+    
+</body>
+<!-- Fin del CUERPO -->
+
+</html>
+<!-- ============================================================
+     FIN DEL DOCUMENTO
+     ============================================================
+     Aquí termina TODO el documento HTML
+     
+     ESTRUCTURA VISUAL:
+     
+     <html>
+       │
+       ├── <head>
+       │     ├── <meta charset>
+       │     ├── <title>
+       │     ├── <style> (CSS)
+       │     └── <script src> (JavaScript)
+       │
+       └── <body>
+             │
+             └── <div class="caja">
+                   │
+                   ├── <div class="botones">
+                   │     ├── <button> rojo
+                   │     ├── <button> verde
+                   │     └── <button> azul
+                   │
+                   ├── <div class="resultado">
+                   │     ├── <span id="valor-rojo">
+                   │     ├── <span id="valor-verde">
+                   │     └── <span id="valor-azul">
+                   │
+                   └── <div id="colorbox">
+     
+     CÓMO SE VE EN PANTALLA:
+     
+     ┌─────────────────────────────────┐
+     │   [rojo] [verde] [azul]         │  ← 3 botones
+     │                                 │
+     │       123    45    200          │  ← 3 números RGB
+     │                                 │
+     │   ┌─────────────────────────┐   │
+     │   │                         │   │  ← Cuadro de color
+     │   │      (color RGB)        │   │
+     │   └─────────────────────────┘   │
+     └─────────────────────────────────┘
+     -->

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Esto le dice al navegador: "Este es un documento HTML5" -->
+
+<html lang="es">
+<!-- <html> es la etiqueta principal que envuelve TODO
+     lang="es" significa que el idioma es español -->
+
+<head>
+    <!-- <head> es la CABEZA del documento
+         Aquí va información SOBRE la página, pero no se ve en pantalla -->
+    
+    <meta charset="UTF-8">
+    <!-- charset="UTF-8" permite usar letras con tildes (á, é, í, ó, ú, ñ) -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esto hace que la página se vea bien en móviles -->
+    
+    <title>Ejercicio 1 - Bienvenida</title>
+    <!-- <title> es el texto que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+    <!-- <body> es el CUERPO del documento
+TODO lo que escribas aquí SÍ se verá en la pantalla -->
+    
+    <h1>Ejercicio 1: Mensaje de Bienvenida</h1>
+    <!-- <h1> es un TÍTULO grande (Heading 1)
+         Es el título más importante de la página -->
+    
+    <!-- ======================================== -->
+    <!-- FORMULARIO: Donde el usuario escribe -->
+    <!-- ======================================== -->
+    <form>
+        <!-- <form> es un FORMULARIO
+             Es como una hoja donde el usuario puede escribir cosas -->
+        
+        <label for="nombre">Nombre:</label>
+        <!-- <label> es una ETIQUETA de texto
+             "for" conecta esta etiqueta con el input que tiene id="nombre"
+             Es como poner una pegatina que dice "Nombre:" al lado del cuadro -->
+        
+        <input type="text" id="nombre" placeholder="Escribe tu nombre aquí">
+        <!-- <input> es un CUADRO DE TEXTO donde el usuario puede escribir
+             
+             Atributos importantes:
+             - type="text" → Es un cuadro de texto normal
+             - id="nombre" → Le ponemos un NOMBRE para identificarlo
+                             Es como ponerle una etiqueta "nombre" a la caja
+             - placeholder → Es el texto de ayuda que aparece dentro del cuadro
+                             Desaparece cuando empiezas a escribir -->
+        
+        <button type="button" onclick="saludar()">Saludar</button>
+        <!-- <button> es un BOTÓN que se puede pulsar
+             
+             Atributos importantes:
+             - type="button" → Es un botón normal (no envía formulario)
+             - onclick="saludar()" → EVENTO: cuando el usuario haga clic,
+                                     ejecuta la función saludar()
+             
+             El texto entre <button> y </button> es lo que se ve en el botón -->
+    </form>
+    
+    <!-- ======================================== -->
+    <!-- DIV: Caja vacía donde aparecerá el resultado -->
+    <!-- ======================================== -->
+    <div id="mensaje"></div>
+    <!-- <div> es una CAJA VACÍA, un contenedor
+         - id="mensaje" → Le ponemos nombre para encontrarlo con JavaScript
+         
+         Esta caja empieza VACÍA
+         JavaScript escribirá aquí el mensaje de bienvenida -->
+    
+    <!-- ======================================== -->
+    <!-- SCRIPT: Enlace al archivo JavaScript -->
+    <!-- ======================================== -->
+    <script src="ejercicio1_lectura_atributo_evento.js"></script>
+    <!-- <script> sirve para incluir código JavaScript
+         - src="ejercicio1_bienvenida.js" → Le decimos dónde está el archivo JS
+         
+         IMPORTANTE: El archivo .js debe estar en la MISMA CARPETA que el .html -->
+    
+</body>
+</html>
+<!-- Aquí termina todo el documento HTML -->

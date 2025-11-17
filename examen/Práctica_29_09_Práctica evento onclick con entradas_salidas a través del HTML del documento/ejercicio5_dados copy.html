@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     DECLARACIÓN DEL TIPO DE DOCUMENTO
+     ============================================================
+     Esta línea le dice al navegador:
+     "Este archivo es un documento HTML5"
+     
+     Es como poner una etiqueta en un sobre que dice:
+     "Esto es una carta, no un paquete"
+     
+     SIEMPRE debe ser la primera línea del documento -->
+
+
+<html lang="es">
+<!-- ============================================================
+     ETIQUETA PRINCIPAL HTML
+     ============================================================
+     <html> envuelve TODO el contenido del documento
+     Es como la caja grande que contiene todo
+     
+     Atributo:
+     - lang="es" → indica que el IDIOMA de la página es ESPAÑOL
+       Esto ayuda a:
+       • Los lectores de pantalla (para ciegos) a pronunciar bien
+       • Los traductores automáticos del navegador
+       • Los buscadores como Google -->
+
+<head>
+    <!-- ============================================================
+         CABEZA DEL DOCUMENTO
+         ============================================================
+         <head> contiene INFORMACIÓN SOBRE la página
+         Todo lo que va aquí NO se ve en la pantalla
+         
+         Es como la portada de un libro:
+         - Tiene el título
+         - El autor
+         - El año
+         Pero NO es el contenido del libro -->
+    
+    
+    <meta charset="UTF-8">
+    <!-- ============================================================
+         CODIFICACIÓN DE CARACTERES
+         ============================================================
+         <meta charset="UTF-8"> le dice al navegador:
+         "Usa UTF-8 para mostrar los caracteres"
+         
+         UTF-8 permite usar:
+         - Letras con tildes: á, é, í, ó, ú
+         - La letra ñ
+         - Símbolos: €, ©, ®
+         - Emojis: 🎲, 😊, 💜
+         
+         SIN ESTO, las tildes se verían raras:
+         "Número" se vería como "NÃºmero" -->
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ============================================================
+         CONFIGURACIÓN PARA MÓVILES
+         ============================================================
+         Esta línea hace que la página se vea bien en móviles
+         
+         Atributos:
+         - name="viewport" → se refiere a la pantalla visible
+         - content="..." → configuración:
+           • width=device-width → el ancho es el del dispositivo
+           • initial-scale=1.0 → zoom inicial al 100%
+         
+         Es como decir:
+         "Ajusta la página al tamaño del móvil, sin hacer zoom" -->
+    
+    
+    <title>Dados</title>
+    <!-- ============================================================
+         TÍTULO DE LA PÁGINA
+         ============================================================
+         <title> es el texto que aparece en:
+         - La pestaña del navegador (arriba)
+         - Los favoritos/marcadores
+         - El historial
+         - Los resultados de Google
+         
+         Es como el nombre de la ventana
+         
+         NO se ve dentro de la página, solo en la pestaña -->
+    
+    
+    <style>
+        /* Aquí va el CSS - NO lo comento según pediste */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        button {
+            padding: 4px 16px;
+            margin-right: 4px;
+            font-size: 1em;
+            border-radius: 6px;
+            border: 1px solid #888;
+            background: #eee;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 2em;
+        }
+        #resultado span {
+            display: inline-block;
+            margin: 0 4px;
+        }
+        #resultado .simbolo {
+            color: #888;
+        }
+    </style>
+    <!-- ============================================================
+         ESTILOS CSS
+         ============================================================
+         <style> contiene código CSS para dar ESTILO a la página
+         CSS = Cascading Style Sheets (Hojas de Estilo en Cascada)
+         
+         Sirve para:
+         - Cambiar colores
+         - Cambiar tamaños de letra
+         - Poner bordes
+         - Centrar elementos
+         - Etc.
+         
+         Es como el vestuario y maquillaje de la página -->
+    
+    
+    <script src="ejercicio5_dados copy.js"></script>
+    <!-- ============================================================
+         ENLACE AL ARCHIVO JAVASCRIPT
+         ============================================================
+         <script> sirve para incluir código JavaScript
+         
+         Atributo:
+         - src="ejercicio5_dado.js" → ruta del archivo JS
+           src = source (fuente/origen)
+         
+         Esta línea le dice al navegador:
+         "Busca el archivo ejercicio5_dado.js y ejecútalo"
+         
+         IMPORTANTE:
+         - El archivo .js debe estar en la MISMA CARPETA que el .html
+         - El nombre debe coincidir EXACTAMENTE (mayúsculas/minúsculas)
+         - Si el archivo no está, los botones no funcionarán
+         
+         Es como conectar el cerebro (JS) a la página (HTML) -->
+    
+</head>
+<!-- Aquí termina la CABEZA del documento -->
+
+
+<body>
+    <!-- ============================================================
+         CUERPO DEL DOCUMENTO
+         ============================================================
+         <body> contiene TODO lo que se VE en la pantalla
+         
+         Es el contenido real de la página:
+         - Textos
+         - Imágenes
+         - Botones
+         - Formularios
+         - Videos
+         - Etc.
+         
+         Es como el contenido de un libro (las páginas con texto) -->
+    
+    
+    <h1>Dados</h1>
+    <!-- ============================================================
+         TÍTULO PRINCIPAL (HEADING 1)
+         ============================================================
+         <h1> es el título MÁS IMPORTANTE de la página
+         H1 = Heading 1 (Encabezado 1)
+         
+         Hay 6 niveles de títulos:
+         <h1> → El más grande e importante
+         <h2> → Subtítulo
+         <h3> → Sub-subtítulo
+         <h4>, <h5>, <h6> → Cada vez más pequeños
+         
+         El texto entre <h1> y </h1> es lo que se muestra: "Dados"
+         
+         Solo debe haber UN <h1> por página (el título principal) -->
+    
+    
+    <!-- ======================================== -->
+    <!-- CONTENEDOR DE LOS BOTONES -->
+    <!-- ======================================== -->
+    <div>
+        <!-- ============================================================
+             DIV - CONTENEDOR GENÉRICO
+             ============================================================
+             <div> es una CAJA o CONTENEDOR
+             div = division (división)
+             
+             Sirve para AGRUPAR elementos
+             Es como una caja de cartón donde metes cosas
+             
+             Este <div> agrupa los 3 botones
+             No hace nada por sí solo, pero permite:
+             - Aplicar estilos a todos los botones a la vez
+             - Mover todos los botones juntos
+             - Organizarlos mejor -->
+        
+        
+        <button onclick="lanzarDado(1)">dado 1</button>
+        <!-- ============================================================
+             BOTÓN 1
+             ============================================================
+             <button> es un BOTÓN que se puede pulsar
+             
+             Atributo:
+             - onclick="lanzarDado(1)" → EVENTO DE CLIC
+               onclick = "cuando hagan clic"
+               lanzarDado(1) = ejecuta la función lanzarDado con el parámetro 1
+             
+             ¿Qué pasa cuando pulsas este botón?
+             1. El navegador detecta el clic
+             2. Busca la función lanzarDado en el archivo JS
+             3. Ejecuta lanzarDado(1)
+             4. El número 1 le dice a la función: "lanza el dado 1"
+             
+             Texto del botón:
+             "dado 1" → lo que aparece DENTRO del botón
+             (el texto entre <button> y </button>) -->
+        
+        
+        <button onclick="lanzarDado(2)">dado 2</button>
+        <!-- ============================================================
+             BOTÓN 2
+             ============================================================
+             Igual que el botón 1, pero con el parámetro 2
+             
+             onclick="lanzarDado(2)"
+             → Cuando hagan clic, ejecuta lanzarDado(2)
+             → El 2 le dice: "lanza el dado 2"
+             
+             Texto: "dado 2" -->
+        
+        
+        <button onclick="lanzarDado(3)">dado 3</button>
+        <!-- ============================================================
+             BOTÓN 3
+             ============================================================
+             Igual que los anteriores, pero con el parámetro 3
+             
+             onclick="lanzarDado(3)"
+             → Cuando hagan clic, ejecuta lanzarDado(3)
+             → El 3 le dice: "lanza el dado 3"
+             
+             Texto: "dado 3" -->
+        
+    </div>
+    <!-- Aquí termina el DIV que agrupa los botones -->
+    
+    
+    <!-- ======================================== -->
+    <!-- CONTENEDOR DEL RESULTADO -->
+    <!-- ======================================== -->
+    <div id="resultado"></div>
+    <!-- ============================================================
+         DIV PARA MOSTRAR EL RESULTADO
+         ============================================================
+         Este <div> es una caja VACÍA al principio
+         
+         Atributo:
+         - id="resultado" → IDENTIFICADOR único
+           Es como el DNI del elemento
+           Solo puede haber UN elemento con este id en toda la página
+         
+         ¿Para qué sirve el id?
+         JavaScript usa este id para ENCONTRAR este elemento
+         y escribir dentro de él
+         
+         Ejemplo:
+         document.getElementById("resultado").innerHTML = "3 + 1 + 6 = 10";
+         
+         Esta línea JS busca el elemento con id="resultado"
+         y escribe "3 + 1 + 6 = 10" dentro
+         
+         Al cargar la página:
+         Este <div> está VACÍO: <div id="resultado"></div>
+         
+         Después de pulsar botones:
+         JavaScript escribe dentro:
+         <div id="resultado">
+            <span>3</span> <span class='simbolo'>+</span> 
+            <span>1</span> <span class='simbolo'>+</span> 
+            <span>6</span> <span class='simbolo'>=</span> 
+            <span>10</span>
+         </div>
+         
+         Y se ve en pantalla: "3 + 1 + 6 = 10" -->
+    
+</body>
+<!-- Aquí termina el CUERPO del documento -->
+
+</html>
+<!-- ============================================================
+     FIN DEL DOCUMENTO
+     ============================================================
+     Aquí termina TODO el documento HTML
+     
+     ESTRUCTURA COMPLETA:
+     <html>
+       ├── <head>
+       │     ├── <meta charset>
+       │     ├── <meta viewport>
+       │     ├── <title>
+       │     ├── <style> (CSS)
+       │     └── <script src> (JavaScript)
+       │
+       └── <body>
+             ├── <h1>
+             ├── <div>
+             │     ├── <button> (dado 1)
+             │     ├── <button> (dado 2)
+             │     └── <button> (dado 3)
+             │
+             └── <div id="resultado">
+     -->

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento: HTML5 -->
+
+<html lang="es">
+<!-- Etiqueta principal que envuelve TODO el documento
+     lang="es" indica que el idioma es español -->
+
+<head>
+    <!-- CABEZA del documento: información SOBRE la página (no visible) -->
+    
+    <meta charset="UTF-8">
+    <!-- Permite usar tildes y la letra ñ correctamente -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página se vea bien en móviles -->
+    
+    <title>Ejercicio 3 - Dados</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+    
+    
+    <!-- ======================================== -->
+    <!-- ESTILOS CSS (opcional - para que se vea bonito) -->
+    <!-- ======================================== -->
+    <style>
+        /* Estilo de la caja principal */
+        .caja {
+            border: 2px solid #888;          /* Borde gris de 2px */
+            border-radius: 16px;             /* Esquinas redondeadas */
+            width: 200px;                    /* Ancho de la caja */
+            margin: 40px auto;               /* Centrar la caja */
+            padding: 20px;                   /* Espacio interno */
+            display: flex;                   /* Ordenar elementos */
+            flex-direction: column;          /* En columna (vertical) */
+            align-items: center;             /* Centrar contenido */
+            gap: 16px;                       /* Espacio entre elementos */
+            background: #fff;                /* Fondo blanco */
+        }
+        
+        /* Estilo de los resultados */
+        .resultado {
+            font-size: 2.5em;               /* Letra muy grande */
+            font-weight: bold;               /* Negrita */
+            margin: 0;                       /* Sin márgenes */
+            text-align: center;              /* Texto centrado */
+            min-height: 50px;                /* Altura mínima para que no salte */
+        }
+        
+        /* Estilo de los botones */
+        button {
+            padding: 8px 20px;               /* Espacio interno del botón */
+            font-size: 1em;                  /* Tamaño de letra normal */
+            border-radius: 6px;              /* Esquinas redondeadas */
+            border: 1px solid #888;          /* Borde gris */
+            background: #eee;                /* Fondo gris claro */
+            cursor: pointer;                 /* Manita al pasar el ratón */
+        }
+        
+        /* Cuando pasas el ratón sobre el botón */
+        button:hover {
+            background: #ddd;                /* Se pone un poco más oscuro */
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- CUERPO del documento: TODO lo que se VE en la página -->
+    
+    <h1 style="text-align: center;">Ejercicio 3: Dado Numérico y Dado Alfabético</h1>
+    <!-- Título principal centrado -->
+    
+    
+    <!-- ======================================== -->
+    <!-- CAJA PRINCIPAL que contiene todo -->
+    <!-- ======================================== -->
+    <div class="caja">
+        <!-- class="caja" aplica los estilos CSS definidos arriba -->
+        
+        
+        <!-- ===== BOTÓN 1: Dado numérico (1-6) ===== -->
+        <button type="button" onclick="mostrarNumero()">🎲 Dado 1-6</button>
+        <!-- type="button" = es un botón normal
+             onclick="mostrarNumero()" = cuando hagan clic, ejecuta la función mostrarNumero()
+             🎲 = emoji de dado
+             "Dado 1-6" = texto del botón -->
+        
+        
+        <!-- ===== DIV donde aparece el NÚMERO ===== -->
+        <div id="resultado-num" class="resultado"></div>
+        <!-- id="resultado-num" = identificador único para que JavaScript lo encuentre
+             class="resultado" = aplica estilos (letra grande, negrita, centrado)
+             Esta caja empieza VACÍA, JavaScript escribirá aquí el número -->
+        
+        
+        <!-- ===== BOTÓN 2: Dado alfabético (A-Z) ===== -->
+        <button type="button" onclick="mostrarLetra()">🔤 Dado A-Z</button>
+        <!-- onclick="mostrarLetra()" = ejecuta la función mostrarLetra() al hacer clic
+             🔤 = emoji de letras ABC -->
+        
+        
+        <!-- ===== DIV donde aparece la LETRA ===== -->
+        <div id="resultado-letra" class="resultado"></div>
+        <!-- id="resultado-letra" = identificador único
+             Esta caja empieza VACÍA, JavaScript escribirá aquí la letra -->
+        
+    </div>
+    <!-- Fin de la caja principal -->
+    
+    
+    <!-- ======================================== -->
+    <!-- ENLACE AL ARCHIVO JAVASCRIPT -->
+    <!-- ======================================== -->
+    <script src="ejercicio3_dado y dado alfabético.js"></script>
+    <!-- src="ejercicio3_dados.js" = ruta del archivo JavaScript
+         IMPORTANTE: El archivo .js debe estar en la MISMA CARPETA que este .html -->
+    
+</body>
+<!-- Fin del body -->
+
+</html>
+<!-- Fin del documento HTML -->

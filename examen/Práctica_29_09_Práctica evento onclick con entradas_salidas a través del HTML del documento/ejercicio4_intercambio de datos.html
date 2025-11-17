@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Intercambio</title>
+</head>
+<body>
+    <h1>Ejercicio 4: Intercambio de Datos</h1>
+    
+    <form>
+        <!-- ======================================== -->
+        <!-- PRIMER CUADRO DE TEXTO -->
+        <!-- ======================================== -->
+        <label for="texto1">Texto 1:</label>
+        <input type="text" id="texto1" placeholder="Escribe aquí">
+        <!-- Este es el cuadro de texto de la izquierda -->
+        
+        <button type="button" onclick="copiarADerecha()"> →→ </button>
+        <!-- Botón con flechas →→ que copia de texto1 a texto2 -->
+        
+        <br><br>
+        
+        <!-- ======================================== -->
+        <!-- SEGUNDO CUADRO DE TEXTO -->
+        <!-- ======================================== -->
+        <label for="texto2">Texto 2:</label>
+        <input type="text" id="texto2" placeholder="Escribe aquí">
+        <!-- Este es el cuadro de texto de la derecha -->
+        
+        <button type="button" onclick="copiarAIzquierda()"> ←← </button>
+        <!-- Botón con flechas ←← que copia de texto2 a texto1 -->
+    </form>
+    
+    <script src="ejercicio4_intercambio de datos.js"></script>
+</body>
+</html>
