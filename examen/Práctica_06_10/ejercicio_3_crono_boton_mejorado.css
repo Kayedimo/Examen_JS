@@ -1,0 +1,83 @@
+/* Estilos del body (toda la página) */
+body {
+    /* Fuente básica */
+    font-family: Arial;
+    /* Fondo degradado suave */
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+    /* Altura completa de la ventana */
+    min-height: 100vh;
+    /* Centra el contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Sin márgenes */
+    margin: 0;
+}
+
+/* Contenedor principal */
+.contenedor {
+    /* Fondo blanco */
+    background-color: white;
+    /* Espacio interno */
+    padding: 40px;
+    /* Bordes redondeados */
+    border-radius: 15px;
+    /* Sombra suave */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Centra el contenido */
+    text-align: center;
+    /* Ancho máximo */
+    max-width: 400px;
+}
+
+/* Botón */
+#boton {
+    /* Espacio interno */
+    padding: 15px 40px;
+    /* Tamaño de letra */
+    font-size: 20px;
+    /* Fondo azul */
+    background-color: #667eea;
+    /* Texto blanco */
+    color: white;
+    /* Sin borde */
+    border: none;
+    /* Bordes redondeados */
+    border-radius: 8px;
+    /* Cursor de mano */
+    cursor: pointer;
+    /* Texto en negrita */
+    font-weight: bold;
+    /* Transición suave */
+    transition: background-color 0.3s;
+}
+
+/* Botón al pasar el mouse */
+#boton:hover {
+    /* Fondo morado */
+    background-color: #764ba2;
+}
+
+/* Div del resultado */
+#resultado {
+    /* Espacio arriba */
+    margin-top: 30px;
+    /* Espacio interno */
+    padding: 20px;
+    /* Fondo amarillo claro */
+    background-color: #fff9c4;
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Tamaño de letra grande */
+    font-size: 28px;
+    /* Texto en negrita */
+    font-weight: bold;
+    /* Color del texto */
+    color: #333;
+    /* Altura mínima */
+    min-height: 70px;
+    /* Centra verticalmente el contenido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
