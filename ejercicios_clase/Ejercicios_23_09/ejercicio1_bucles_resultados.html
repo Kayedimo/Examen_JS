@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculos con Bucles y BigInt</title>
+    <!-- Sin estilos -->
+</head>
+<body>
+    <div id="normales"></div>
+    <div id="bigint"></div>
+    <script>
+        // a) Cálculos con bucles y números normales
+        let resultadoFor = 1;
+        for (let i = 0; i < 53; i++) {
+            resultadoFor *= 2;
+        }
+        let resultadoForMas1 = resultadoFor + 1;
+
+        let resultadoWhile = 1;
+        let j = 0;
+        while (j < 128) {
+            resultadoWhile *= 2;
+            j++;
+        }
+
+        let resultadoDoWhile = 1;
+        let k = 1;
+        do {
+            resultadoDoWhile *= k;
+            k++;
+        } while (k <= 128);
+
+        document.getElementById('normales').innerHTML = `
+            ${resultadoFor}<br>
+            ${resultadoForMas1}<br>
+            ${resultadoWhile}<br>
+            ${resultadoDoWhile}<br>
+        `;
+
+        // b) Cálculos con BigInt y bucles diferentes
+        let bigWhile = 1n;
+        let iBig = 0n;
+        while (iBig < 53n) {
+            bigWhile *= 2n;
+            iBig++;
+        }
+        let bigWhileMas1 = bigWhile + 1n;
+
+        let bigDoWhile = 1n;
+        let jBig = 0n;
+        do {
+            bigDoWhile *= 2n;
+            jBig++;
+        } while (jBig < 128n);
+
+        let bigFact = 1n;
+        for (let m = 1n; m <= 128n; m++) {
+            bigFact *= m;
+        }
+
+        document.getElementById('bigint').innerHTML = `
+            ${bigWhile}<br>
+            ${bigWhileMas1}<br>
+            ${bigDoWhile}<br>
+            ${bigFact}<br>
+        `;
+    </script>
+</body>
+</html>
