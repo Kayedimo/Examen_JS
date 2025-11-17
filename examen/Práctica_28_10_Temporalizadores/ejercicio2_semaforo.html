@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Semáforo y coches</title>
+  <style>
+    body { position: relative; height: 200px; overflow: hidden; }
+    .coche {
+      position: absolute;
+      top: 40px;
+      width: 60px;
+      height: 30px;
+      background-color: steelblue;
+      border-radius: 5px;
+    }
+    #cocheB {
+      top: 100px;
+      background-color: tomato;
+    }
+    #semaforo {
+      position: absolute;
+      top: 70px;
+      left: 300px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: green;
+      cursor: pointer;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="cocheA" class="coche"></div>
+  <div id="cocheB" class="coche"></div>
+  <div id="semaforo"></div>
+
+  <script src="ejercicio2_semaforo.js"></script>
+</body>
+</html>
