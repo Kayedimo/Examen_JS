@@ -1,0 +1,16 @@
+<!--EJERCICIO 4: Frase asincrónica con API simulada
+📝 Enunciado
+Simula una API que devuelve palabras con retraso y forma la frase “Hola desde Madrid”.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Frase asincrónica</title>
+</head>
+<body>
+  <h1 id="frase">Generando frase...</h1>
+  <script src="4.js"></script>
+</body>
+</html>

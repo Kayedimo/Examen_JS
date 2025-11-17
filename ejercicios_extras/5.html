@@ -1,0 +1,23 @@
+<!-- EJERCICIO 5: Semáforo que controla movimiento
+📝 Enunciado
+Crea dos coches que se mueven de izquierda a derecha. Un botón tipo semáforo detiene o reanuda el movimiento.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Semáforo y coches</title>
+  <style>
+    .coche { position: absolute; width: 60px; height: 30px; background: steelblue; top: 40px; }
+    #cocheB { top: 100px; background: tomato; }
+    #semaforo { position: absolute; top: 70px; left: 300px; width: 40px; height: 40px; border-radius: 50%; background: green; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="cocheA" class="coche"></div>
+  <div id="cocheB" class="coche"></div>
+  <div id="semaforo"></div>
+  <script src="5.js"></script>
+</body>
+</html>
