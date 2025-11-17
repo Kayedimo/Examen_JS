@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de multiplicar</title>
+    <style>
+/* Tabla de multiplicar::after
+Muestra la tabla de multiplicar del 1 al 10 (necesitarás dos bucles for, anidados).
+En la primera fila y en la primera columna, se mostrarán los multiplicandos.
+
+Es posible que el navegador intente renderizar correctamente la tabla si la vas escribiendo poco a poco 
+sobre el documento, obteniéndose un resultado no deseado.
+
+Guarda todo el HTML que conforma la tabla en una variable String, y luego plásmalo sobre la página web 
+en el innerHTML de algún elemento.
+
+*/
+        body {
+
+            
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: white;
+        }
+
+        table {
+        border-collapse: collapse;
+        }
+
+        td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: 1px solid lightgray;
+        font-size: 18px;
+        }
+
+        .simbolo {
+        color: green;
+        font-weight: bold;
+        }
+
+        .encabezado {
+        color: gray;
+        }
+
+        .producto {
+        color: purple;
+        }
+    </style>
+    </head>
+    <body>
+    <div id="tabla"></div>
+
+    <script src="3. Table_multiplicar.js"></script>
+</body>
+</html>
