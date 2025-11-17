@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento: HTML5 -->
+<html lang="es">
+<!-- El idioma principal del contenido es español -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Codificación de caracteres en UTF-8 para admitir tildes y caracteres especiales -->
+
+    <title>Tabla de multiplicar</title>
+    <!-- Título que aparecerá en la pestaña del navegador -->
+
+    <style>
+        body {
+
+            
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: white;
+        }
+
+        table {
+        border-collapse: collapse;
+        }
+
+        td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: 1px solid lightgray;
+        font-size: 18px;
+        }
+
+        .simbolo {
+        color: green;
+        font-weight: bold;
+        }
+
+        .encabezado {
+        color: gray;
+        }
+
+        .producto {
+        color: purple;
+        }
+    
+        /* Aquí va el estilo visual de la página (no se comenta porque lo pediste así) */
+    </style>
+</head>
+
+<body>
+    <!-- Cuerpo principal de la página -->
+
+    <div id="tabla"></div>
+    <!-- Contenedor vacío donde se insertará dinámicamente la tabla de multiplicar -->
+
+    <script src="ejercicio3_tabla_multiplicar.js"></script>
+    <!-- Enlace al archivo JavaScript que generará la tabla y la insertará en el div -->
+</body>
+
+</html>

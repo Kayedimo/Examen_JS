@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#harry{
+    width: 300px;
+    cursor: pointer;
+    display: block;                   /* Asegura que sea un bloque */
+    margin: 0 auto;                   /* Centra horizontalmente */    
+    transition: opacity 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

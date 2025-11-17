@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     DECLARACIÓN DEL TIPO DE DOCUMENTO
+     ============================================================
+     Esta línea SIEMPRE va al principio del archivo
+     Le dice al navegador: "Este es un documento HTML5"
+     
+     Es obligatoria en todos los archivos HTML
+     Sin ella, el navegador podría interpretar mal el código -->
+
+
+<html lang="es">
+<!-- ============================================================
+     ETIQUETA RAÍZ HTML
+     ============================================================
+     <html> es la etiqueta PRINCIPAL que envuelve TODO
+     Es como la caja más grande que contiene todo el documento
+     
+     Atributo:
+     - lang="es" → indica que el IDIOMA es ESPAÑOL
+       Esto ayuda a:
+       • Lectores de pantalla (para personas ciegas)
+       • Traductores automáticos del navegador
+       • Buscadores como Google
+       
+     Ejemplos de otros idiomas:
+     lang="en" → inglés
+     lang="fr" → francés
+     lang="de" → alemán -->
+
+
+<head>
+    <!-- ============================================================
+         CABEZA DEL DOCUMENTO
+         ============================================================
+         <head> contiene INFORMACIÓN SOBRE la página
+         
+         Lo que va aquí NO se ve en la pantalla del navegador
+         Es información para el navegador, buscadores, etc.
+         
+         Es como el sobre de una carta:
+         - Tiene la dirección
+         - El remitente
+         - El sello
+         Pero NO es el contenido de la carta -->
+    
+    
+    <meta charset="UTF-8">
+    <!-- ============================================================
+         CODIFICACIÓN DE CARACTERES
+         ============================================================
+         <meta charset="UTF-8"> le dice al navegador:
+         "Usa UTF-8 para interpretar los caracteres"
+         
+         UTF-8 es un formato que incluye:
+         - Letras con tildes: á, é, í, ó, ú
+         - La letra ñ española
+         - Símbolos especiales: €, ©, ®, °
+         - Emojis: 😊, 🎉, 💜
+         
+         SIN ESTO:
+         "Contraseña" se vería como "ContraseÃ±a"
+         "Introducción" se vería como "IntroducciÃ³n"
+         
+         CON ESTO:
+         Todo se ve correctamente ✓ -->
+    
+    
+    <title>Login con Password</title>
+    <!-- ============================================================
+         TÍTULO DE LA PÁGINA
+         ============================================================
+         <title> es el texto que aparece en:
+         - La pestaña del navegador (arriba)
+         - Los favoritos/marcadores
+         - El historial del navegador
+         - Los resultados de búsqueda de Google
+         
+         NO aparece dentro de la página
+         Solo se ve en la pestaña del navegador
+         
+         Es como el nombre del archivo o el título de un libro
+         
+         Ejemplo visual:
+         ┌─────────────────────────┐
+         │ Login con Password  [×] │ ← Aquí aparece el <title>
+         └─────────────────────────┘
+         │                         │
+         │   Contenido visible     │
+         │                         │
+         └─────────────────────────┘ -->
+    
+</head>
+<!-- Aquí termina la CABEZA del documento -->
+
+
+    <body>
+    <!-- ============================================================
+         CUERPO DEL DOCUMENTO
+         ============================================================
+         <body> contiene TODO lo que SE VE en la pantalla
+         
+         Todo lo que escribas aquí SÍ aparecerá en el navegador:
+         - Textos
+         - Botones
+         - Imágenes
+         - Formularios
+         - Videos
+         - etc.
+         
+         Es el contenido real de la página -->
+        
+        
+        <h1>Introduce tu contraseña</h1>
+        <!-- ============================================================
+             TÍTULO PRINCIPAL (HEADING 1)
+             ============================================================
+             <h1> es el título MÁS IMPORTANTE de la página
+             H1 = Heading 1 (Encabezado de nivel 1)
+             
+             Hay 6 niveles de títulos:
+             <h1> → El más grande e importante
+             <h2> → Subtítulo
+             <h3> → Sub-subtítulo
+             <h4>, <h5>, <h6> → Cada vez más pequeños
+             
+             El texto entre <h1> y </h1> es lo que se muestra
+             En este caso: "Introduce tu contraseña"
+             
+             Solo debe haber UN <h1> por página (el título principal)
+             
+             Por defecto, el navegador lo muestra:
+             - En letra GRANDE
+             - En NEGRITA
+             - Con espacio arriba y abajo -->
+
+
+<!-- ============================================================
+     COMENTARIO HTML (ENUNCIADO DEL EJERCICIO)
+     ============================================================
+     Esto es un COMENTARIO
+     Los comentarios NO se ven en la página
+     Solo los ves en el código fuente
+     
+     Sirven para:
+     - Explicar qué hace el código
+     - Recordar cosas importantes
+     - Dejar notas para otros programadores (o para ti mismo)
+     
+     Sintaxis de comentarios HTML:
+     /* Esto es un comentario
+     
+     El enunciado del ejercicio dice:
+     
+     "Crea una página web donde se solicite un password. 
+      Tendrá un input-text y un botón.
+      Dicho password se almacenará en una variable, 
+      y será el siguiente: password: secreto
+      
+      Se admitirán hasta tres intentos de acierto.
+      - Si errara se dará por finalizado el proceso de login 
+        mostrando un mensaje en la página.
+        document.querySelector("#boton").disabled = true;
+      - Si acertara el password, se mostrará un mensaje 
+        de bienvenida." -->
+
+
+    <input type="text" id="passwordInput" placeholder="Escribe el password">
+    <!-- ============================================================
+         CAMPO DE TEXTO (INPUT)
+         ============================================================
+         <input> es un CUADRO DE TEXTO donde el usuario puede escribir
+         
+         Es un elemento VACÍO (no tiene etiqueta de cierre </input>)
+         Se cierra solo: <input>
+         
+         Atributos explicados:
+         
+         1. type="text"
+            ¿Qué es? → Define el TIPO de input
+            type="text" → cuadro de texto normal
+            
+            Otros tipos comunes:
+            type="password" → oculta lo que escribes (muestra ••••)
+            type="number" → solo permite números
+            type="email" → valida que sea un email
+            type="date" → selector de fecha
+            
+            NOTA: En este ejercicio usas type="text" en vez de 
+            type="password", entonces el texto se ve mientras lo escribes
+            Si quieres que se oculte (••••), cambia a type="password"
+         
+         2. id="passwordInput"
+            ¿Qué es? → IDENTIFICADOR único del elemento
+            Es como el DNI del input
+            
+            ¿Para qué sirve?
+            JavaScript usa este id para ENCONTRAR este input
+            y leer lo que el usuario escribió
+            
+            Ejemplo en JavaScript:
+            document.getElementById("passwordInput").value
+            → Busca el input con id="passwordInput"
+            → Lee su contenido (.value)
+            
+            IMPORTANTE:
+            - Solo puede haber UN elemento con este id en toda la página
+            - No puede tener espacios
+            - Distingue mayúsculas/minúsculas
+         
+         3. placeholder="Escribe el password"
+            ¿Qué es? → Texto de AYUDA dentro del input
+            
+            Se muestra de color gris claro DENTRO del cuadro
+            Desaparece automáticamente cuando el usuario empieza a escribir
+            
+            Es como una pista o sugerencia:
+            "Escribe el password"
+            
+            Ejemplo visual:
+            ┌─────────────────────────────┐
+            │ Escribe el password         │ ← placeholder (gris claro)
+            └─────────────────────────────┘
+            
+            Cuando el usuario escribe:
+            ┌─────────────────────────────┐
+            │ hola123█                    │ ← texto del usuario (negro)
+            └─────────────────────────────┘ -->
+    
+    
+    <button id="boton">Ingresar</button>
+    <!-- ============================================================
+         BOTÓN
+         ============================================================
+         <button> es un BOTÓN que el usuario puede pulsar
+         
+         A diferencia de <input>, <button> tiene:
+         - Etiqueta de apertura: <button>
+         - Contenido (texto): "Ingresar"
+         - Etiqueta de cierre: </button>
+         
+         Atributo:
+         
+         id="boton"
+         ¿Qué es? → Identificador único del botón
+         
+         ¿Para qué sirve?
+         JavaScript usa este id para:
+         1. Añadir un evento onclick (detectar el clic)
+         2. Deshabilitar el botón si se agotan los intentos
+         
+         Ejemplo en JavaScript:
+         document.querySelector("#boton").disabled = true;
+         → Busca el elemento con id="boton"
+         → Lo deshabilita (se pone gris y no funciona)
+         
+         IMPORTANTE:
+         El ejercicio dice usar document.querySelector("#boton")
+         El símbolo # significa "buscar por id"
+         
+         Texto del botón:
+         "Ingresar" → Es lo que aparece DENTRO del botón
+         El texto entre <button> y </button>
+         
+         Nota: El evento onclick se añade en JavaScript,
+         no directamente en el HTML (buena práctica) -->
+    
+    
+    <p id="mensaje"></p>
+    <!-- ============================================================
+         PÁRRAFO VACÍO (PARA MENSAJES)
+         ============================================================
+         <p> es un PÁRRAFO de texto
+         
+         Este párrafo está VACÍO: <p></p>
+         No tiene nada entre la etiqueta de apertura y cierre
+         Por lo tanto, NO se ve nada en la pantalla al principio
+         
+         Atributo:
+         
+         id="mensaje"
+         ¿Qué es? → Identificador único
+         
+         ¿Para qué sirve?
+         JavaScript escribirá MENSAJES aquí:
+         - "Contraseña incorrecta. Te quedan 2 intentos"
+         - "Acceso denegado. Has agotado los intentos"
+         - "¡Bienvenido! Acceso concedido"
+         
+         Ejemplo en JavaScript:
+         document.getElementById("mensaje").innerHTML = "¡Bienvenido!";
+         → Busca el <p> con id="mensaje"
+         → Escribe "¡Bienvenido!" dentro
+         
+         Antes: <p id="mensaje"></p>                    (vacío)
+         Después: <p id="mensaje">¡Bienvenido!</p>      (con texto)
+         
+         En pantalla aparece: ¡Bienvenido!
+         
+         Es como una pizarra vacía donde JavaScript puede escribir -->
+
+
+<!-- ============================================================
+     SEGUNDO COMENTARIO HTML
+     ============================================================
+     Otro comentario explicando que se enlaza JavaScript -->
+<!-- Enlace al archivo JavaScript externo -->
+
+
+    <script src="ejercicio1_control_acceso.js"></script>
+    <!-- ============================================================
+         ENLACE AL ARCHIVO JAVASCRIPT
+         ============================================================
+         <script> sirve para incluir código JavaScript
+         
+         Atributo:
+         
+         src="1.Control_de_acceso.js"
+         src = source (fuente / origen)
+         
+         ¿Qué hace?
+         Le dice al navegador:
+         "Busca el archivo 1.Control_de_acceso.js 
+          y ejecuta el código JavaScript que hay dentro"
+         
+         IMPORTANTE:
+         - El archivo .js debe estar en la MISMA CARPETA que el .html
+         - El nombre debe coincidir EXACTAMENTE
+         - Si el archivo no existe, los botones NO funcionarán
+         
+         ¿Dónde está el archivo?
+         En este caso: 1.Control_de_acceso.js
+         (mismo directorio que el HTML)
+         
+         Si estuviera en otra carpeta:
+         src="js/1.Control_de_acceso.js"  (carpeta js/)
+         src="../1.Control_de_acceso.js"  (carpeta padre)
+         
+         ¿Por qué separar HTML y JavaScript?
+         - El HTML define la ESTRUCTURA (qué elementos hay)
+         - El JavaScript define el COMPORTAMIENTO (qué hacen)
+         - Es más fácil de mantener y organizar
+         
+         Alternativa (NO recomendada):
+         Podrías escribir el código JS directamente aquí:
+         <script>
+    
+         </script>
+         Pero es mejor usar archivos separados -->
+    
+</body>
+<!-- Aquí termina el CUERPO del documento -->
+
+</html>
+<!-- ============================================================
+     FIN DEL DOCUMENTO HTML
+     ============================================================
+     Aquí termina TODO el documento
+     
+     ESTRUCTURA COMPLETA:
+     
+     <html>
+       │
+       ├── <head>
+       │     ├── <meta charset>
+       │     └── <title>
+       │
+       └── <body>
+             ├── <h1>
+             ├── <input>
+             ├── <button>
+             ├── <p>
+             └── <script src>
+     
+     
+     FLUJO VISUAL EN PANTALLA:
+     
+     ┌─────────────────────────────────────┐
+     │ Login con Password            [×]   │ ← <title> (pestaña)
+     ├─────────────────────────────────────┤
+     │                                     │
+     │  Introduce tu contraseña            │ ← <h1>
+     │                                     │
+     │  ┌───────────────────────────────┐  │
+     │  │ Escribe el password           │  │ ← <input>
+     │  └───────────────────────────────┘  │
+     │                                     │
+     │       [ Ingresar ]                  │ ← <button>
+     │                                     │
+     │  (mensaje aparece aquí)             │ ← <p> (vacío al inicio)
+     │                                     │
+     └─────────────────────────────────────┘ -->
